@@ -61,12 +61,12 @@ lane :release do
   )
 
   # release podspec to cocoapods
-  sh "cd .. && pod trunk push"
+  sh "cd .. && pod trunk push --allow-warnings" # we have to --allow-warnings bc of alamofire warnings for now
 
   # notify us on slack
   slack(
     slack_url: ENV['SLACK_RELEASES_URL'],
-    message: "Successfully released [XcodeServerSDK #{version}](#{release['html_url']}) :rocket:",
+    message: "Successfully released [#{project_name} #{version}](#{release['html_url']}) :rocket:",
     payload: {
       "New" => release['body']
     }
