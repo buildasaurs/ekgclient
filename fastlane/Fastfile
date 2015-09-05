@@ -52,6 +52,7 @@ lane :release do
   repo_url = project_github_name
   release = set_github_release(
     repository_name: repo_url,
+    commitish: release_branch,
     api_token: ENV["GITHUB_TOKEN"],
     name: [version, title].join(" - "),
     tag_name: version,
