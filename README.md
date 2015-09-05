@@ -1,2 +1,2 @@
-# ekg-client
-Swift client code for sending heartbeats to ekg.
+# ekg client
+Swift SDK for sending heartbeats to [ekg](https://github.com/czechboy0/ekg).
