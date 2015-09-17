@@ -12,12 +12,24 @@ let kTokenKey = "ekg.token"
 
 public class EkgClientHelper {
     
-    public static func pullAppIdentifierFromBundle(bundle: NSBundle) -> String? {
+    private static func pullStringFromBundle(key: String, bundle: NSBundle) -> String? {
         guard let info = bundle.infoDictionary else {
             return nil
         }
-        let appId = info["CFBundleIdentifier"] as? String
+        let appId = info[key] as? String
         return appId
+    }
+    
+    public static func pullAppIdentifierFromBundle(bundle: NSBundle) -> String? {
+        return self.pullStringFromBundle("CFBundleIdentifier", bundle: bundle)
+    }
+    
+    public static func pullVersionFromBundle(bundle: NSBundle) -> String? {
+        return self.pullStringFromBundle("CFBundleShortVersionString", bundle: bundle)
+    }
+    
+    public static func pullBuildNumberFromBundle(bundle: NSBundle) -> String? {
+        return self.pullStringFromBundle("CFBundleVersion", bundle: bundle)
     }
     
     internal static func getLocalToken(userDefaults: NSUserDefaults) -> String {
