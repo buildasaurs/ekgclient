@@ -27,5 +27,5 @@ class ekgclientTests: XCTestCase {
         
         self.waitForExpectationsWithTimeout(60, handler: nil)
     }
-    
+
 }

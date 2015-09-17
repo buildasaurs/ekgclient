@@ -13,6 +13,12 @@ public struct AppInfo: Sendable {
     public let appIdentifier: String
     public let version: String
     public let build: String
+    
+    public init(appIdentifier: String, version: String, build: String) {
+        self.appIdentifier = appIdentifier
+        self.version = version
+        self.build = build
+    }
 }
 
 public class EkgClient {

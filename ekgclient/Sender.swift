@@ -18,6 +18,10 @@ public struct ServerInfo {
     
     //ekg host server, e.g. https://builda-ekg.herokuapp.com/ for buildasaur
     public let host: NSURL
+    
+    public init(host: NSURL) {
+        self.host = host
+    }
 }
 
 /// Sends events to the server
