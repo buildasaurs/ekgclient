@@ -18,6 +18,8 @@ public protocol Sendable {
 
 public class Event: Sendable {
     
+    public static var testGenerated = false
+    
     public let eventType: String
     
     public init(eventType: String) {
@@ -26,7 +28,9 @@ public class Event: Sendable {
     
     public func jsonify() -> JSON {
         var dict = JSON()
-        dict["test_generated"] = true //to throw it away at the server
+        if Event.testGenerated {
+            dict["test_generated"] = true //to throw away test events at the server
+        }
         dict["event_type"] = self.eventType
         return dict
     }

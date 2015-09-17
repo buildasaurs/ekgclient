@@ -11,6 +11,12 @@ import XCTest
 
 class ekgclientTests: XCTestCase {
     
+    override func setUp() {
+        super.setUp()
+        
+        Event.testGenerated = true
+    }
+    
     func testLive_Sending() {
         let exp = self.expectationWithDescription("network")
         

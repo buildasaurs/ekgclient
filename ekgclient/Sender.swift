@@ -57,9 +57,6 @@ class Sender_V1: Sender {
             .request(.POST, url, parameters: body, encoding: .JSON)
             .validate()
             .responseString(encoding: NSUTF8StringEncoding) { request, response, result in
-                print(request)
-                print(response)
-                print(result.error)
                 completion?(error: result.error)
         }
     }
