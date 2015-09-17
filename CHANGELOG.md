@@ -1,5 +1,8 @@
 # Change Log
 
+## [v0.3.0](https://github.com/czechboy0/ekgclient/tree/v0.3.0) (2015-09-17)
+[Full Changelog](https://github.com/czechboy0/ekgclient/compare/v0.2.3...v0.3.0)
+
 ## [v0.2.3](https://github.com/czechboy0/ekgclient/tree/v0.2.3) (2015-09-17)
 [Full Changelog](https://github.com/czechboy0/ekgclient/compare/v0.2.2...v0.2.3)
 
