@@ -24,7 +24,8 @@ class ekgclientTests: XCTestCase {
         let serverInfo = ServerInfo(host: NSURL(string: "http://localhost:3000")!)
         let client = EkgClient(appInfo: appInfo, serverInfo: serverInfo)
         
-        let event = HeartbeatEvent(uptime: 10, numberOfRunningSyncers: 1)
+        let types = ["github": 2, "bitbucket": 3]
+        let event = HeartbeatEvent(uptime: 10, typesOfRunningSyncers: types)
         
         client.sendEvent(event) { (error) -> () in
             XCTAssertNil(error)

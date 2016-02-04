@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ekgclient"
-  s.version      = "0.3.0"
+  s.version      = "0.3.1"
   s.summary      = "Swift SDK for sending events to ekg."
 
   s.description  = <<-DESC
