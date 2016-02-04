@@ -12,9 +12,11 @@ import XCTest
 class EventTests: XCTestCase {
     
     func testHeartbeatEvent_Creation() {
-        let event = HeartbeatEvent(uptime: 10, numberOfRunningSyncers: 1)
+        let types = ["github": 2, "bitbucket": 3]
+        let event = HeartbeatEvent(uptime: 10, typesOfRunningSyncers: types)
         XCTAssertEqual(event.eventType, "heartbeat")
         XCTAssertEqual(event.uptime, 10)
-        XCTAssertEqual(event.numberOfRunningSyncers, 1)
+        XCTAssertEqual(event.typesOfRunningSyncers, types)
+        XCTAssertEqual(event.numberOfRunningSyncers, 5)
     }
 }

@@ -39,18 +39,23 @@ public class Event: Sendable {
 public class HeartbeatEvent: Event {
     
     public let uptime: Double
-    public let numberOfRunningSyncers: Int
+    public let typesOfRunningSyncers: [String: Int]
     
-    public init(uptime: Double, numberOfRunningSyncers: Int) {
+    public init(uptime: Double, typesOfRunningSyncers: [String: Int]) {
         self.uptime = uptime
-        self.numberOfRunningSyncers = numberOfRunningSyncers
+        self.typesOfRunningSyncers = typesOfRunningSyncers
         super.init(eventType: "heartbeat")
+    }
+    
+    var numberOfRunningSyncers: Int {
+        return self.typesOfRunningSyncers.values.reduce(0, combine: +)
     }
     
     public override func jsonify() -> JSON {
         var dict = super.jsonify()
         dict["uptime"] = self.uptime
         dict["running_syncers"] = self.numberOfRunningSyncers
+        dict["running_syncer_types"] = self.typesOfRunningSyncers
         return dict
     }
 }
