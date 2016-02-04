@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.3.1](https://github.com/czechboy0/ekgclient/tree/v0.3.1) (2016-02-04)
+[Full Changelog](https://github.com/czechboy0/ekgclient/compare/v0.3.0...v0.3.1)
+
+**Merged pull requests:**
+
+- Added syncer type information \(GitHub/BitBucket\) [\#1](https://github.com/czechboy0/ekgclient/pull/1) ([czechboy0](https://github.com/czechboy0))
+
 ## [v0.3.0](https://github.com/czechboy0/ekgclient/tree/v0.3.0) (2015-09-17)
 [Full Changelog](https://github.com/czechboy0/ekgclient/compare/v0.2.3...v0.3.0)
 
