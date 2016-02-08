@@ -66,3 +66,10 @@ public class LaunchEvent: Event {
         super.init(eventType: "launch")
     }
 }
+
+public class UpdateEvent: Event {
+    
+    public init() {
+        super.init(eventType: "update")
+    }
+}
